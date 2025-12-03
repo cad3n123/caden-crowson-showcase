@@ -9,8 +9,8 @@ const [ $select, $videoContent ] = [ 'select', 'video-content' ].map(id => docum
 document.addEventListener('DOMContentLoaded', () => {
     [
       {
-        url: 'https://RAREROOMEast.com',
-        title: 'RAREROOM'
+        url: './infinite-matter',
+        title: 'Infinite Matter'
       },
       {
         url: './',
