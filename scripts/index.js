@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
       title: 'This Website',
     },
   ].forEach(({ url, title }) => {
-    const $vhs = document.createElement('div');
+    const $vhs = document.createElement('button');
     $vhs.classList.add('vhs');
     $vhs.setAttribute('data-url', url);
     $vhs.innerHTML = title;
