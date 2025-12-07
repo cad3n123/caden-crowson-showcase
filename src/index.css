@@ -1,0 +1,117 @@
+@import "tailwindcss";
+
+@theme {
+  /* Custom Colors */
+  --color-theme-light: rgb(220, 220, 220);
+  --color-theme-dark-1: rgb(20, 20, 20);
+  --color-theme-dark-2: rgb(40, 40, 40);
+  --color-theme-dark-3: rgb(70, 70, 70);
+  --color-theme-dark-4: rgb(110, 110, 110);
+  --color-tv-plastic: #2a2a2a;
+  --color-tv-bezel: #1a1a1a;
+
+  /* Custom Animations */
+  --animate-scan-lines: scan-lines 50s linear infinite;
+  /* UPDATED: Faster animation (0.8s) */
+  --animate-insert-tape: insert-tape 0.8s ease-in-out forwards;
+  --animate-blink: blink 2s infinite;
+
+  /* Fonts */
+  --font-mono: monospace;
+}
+
+/* Custom Keyframes */
+@keyframes scan-lines {
+  from { background-position: 0 0; }
+  to { background-position: 0 -10vh; }
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; text-shadow: 0 0 5px var(--color-theme-light); }
+}
+
+@keyframes insert-tape {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  20% {
+     transform: translateY(0) scale(1);
+  }
+  100% {
+    transform: translateY(120%); /* Move down further since slot is deeper */
+    opacity: 0;
+  }
+}
+
+/* Custom Utilities */
+@layer components {
+  .crt-overlay {
+    background: linear-gradient(to top, #111111, #111111, #333333, #333333);
+    background-size: 100% 1vh;
+  }
+  
+  .writing-sideways {
+    writing-mode: sideways-lr;
+    writing-mode: vertical-rl; 
+    transform: rotate(180deg);
+  }
+
+  .speaker-grille {
+    background-image: radial-gradient(circle, var(--color-theme-dark-1) 2px, transparent 1px);
+    background-size: 6px 6px;
+  }
+
+  .vhs-slot-opening {
+    background: #000;
+    box-shadow: inset 0 2px 5px rgba(0,0,0,0.8);
+    border-bottom: 2px solid var(--color-theme-dark-3);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .vhs-slot-flap {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* Flap covers full height now */
+    background: linear-gradient(to bottom, var(--color-theme-dark-3), var(--color-theme-dark-2));
+    transform-origin: top;
+    transition: transform 0.2s; /* Faster flap */
+    z-index: 20;
+    border-bottom: 1px solid var(--color-theme-dark-1);
+    opacity: 0.9;
+  }
+
+  .inserting .vhs-slot-flap {
+     transform: rotateX(-90deg);
+  }
+
+  .animated-vhs-tape {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    margin-left: -8rem;
+    width: 16rem;
+    height: 2.5rem;
+    background-color: var(--color-theme-dark-1);
+    border: 1px solid var(--color-theme-dark-3);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: var(--color-theme-dark-4);
+    z-index: 10; 
+    box-shadow: 0 4px 6px rgba(0,0,0,0.5);
+  }
+}
+
+:root {
+  background-color: var(--color-theme-dark-2);
+  color: var(--color-theme-light);
+  font-family: monospace;
+}
