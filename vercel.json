@@ -18,16 +18,16 @@
   ],
   "rewrites": [
     {
-      "source": "/infinite-matter/:match*",
-      "destination": "https://infinite-matter.vercel.app/:match*"
+      "source": "/infinite-matter/(.*)",
+      "destination": "https://infinite-matter.vercel.app/$1"
     },
     {
-      "source": "/infinite-factory/:match*",
-      "destination": "https://infinite-factory.vercel.app/:match*"
+      "source": "/infinite-factory/(.*)",
+      "destination": "https://infinite-factory.vercel.app/$1"
     },
     {
-      "source": "/sand-timer/:match*",
-      "destination": "https://sand-timer.vercel.app/:match*"
+      "source": "/sand-timer/(.*)",
+      "destination": "https://sand-timer.vercel.app/$1"
     }
   ]
 }
