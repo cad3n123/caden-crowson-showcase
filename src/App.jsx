@@ -9,7 +9,8 @@ function App() {
   const projects = [
     { id: 'p1', url: './infinite-matter', title: 'Infinite Matter' },
     { id: 'p2', url: './infinite-factory', title: 'Infinite Factory' },
-    { id: 'p3', url: './', title: 'This Website' }, 
+    { id: 'p3', url: './sand-timer', title: 'Sand Timer' },
+    { id: 'p4', url: './', title: 'This Website' }, 
   ];
 
   useEffect(() => {

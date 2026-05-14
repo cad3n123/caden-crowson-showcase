@@ -7,6 +7,10 @@
     {
       "source": "/infinite-factory/:match*",
       "destination": "https://infinite-factory.vercel.app/:match*"
+    },
+    {
+      "source": "/sand-timer/:match*",
+      "destination": "https://sand-timer.vercel.app/:match*"
     }
   ]
 }
