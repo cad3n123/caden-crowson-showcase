@@ -1,4 +1,21 @@
 {
+  "redirects": [
+    {
+      "source": "/infinite-matter",
+      "destination": "/infinite-matter/",
+      "permanent": true
+    },
+    {
+      "source": "/infinite-factory",
+      "destination": "/infinite-factory/",
+      "permanent": true
+    },
+    {
+      "source": "/sand-timer",
+      "destination": "/sand-timer/",
+      "permanent": true
+    }
+  ],
   "rewrites": [
     {
       "source": "/infinite-matter/:match*",
