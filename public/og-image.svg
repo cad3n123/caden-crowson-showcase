@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#282828"/>
+  <g transform="translate(80,150)">
+    <text x="0" y="0" font-family="monospace" font-size="80" font-weight="bold" fill="#dcdcdc">Caden Crowson</text>
+    <text x="0" y="80" font-family="monospace" font-size="32" fill="#9e9e9e">Interactive web projects</text>
+    <text x="0" y="280" font-family="monospace" font-size="22" fill="#4ade80">cadencrowson.com</text>
+  </g>
+  <g transform="translate(760,150)">
+    <rect x="0" y="0" width="360" height="280" rx="22" fill="#1a1a1a" stroke="#dcdcdc" stroke-width="4"/>
+    <rect x="20" y="20" width="240" height="200" rx="10" fill="#4ade80"/>
+    <circle cx="310" cy="60" r="10" fill="#dcdcdc"/>
+    <circle cx="310" cy="100" r="10" fill="#dcdcdc"/>
+    <rect x="120" y="250" width="120" height="14" rx="3" fill="#dcdcdc"/>
+  </g>
+</svg>
