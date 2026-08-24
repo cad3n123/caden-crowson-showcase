@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Infinite Factory — AI-generated crafting and automation | Caden Crowson</title>
+  <meta name="description" content="Infinite Factory is a browser crafting and automation game where an AI writes the recipe book, and players race each week to craft an AI-generated goal item." />
+  <link rel="canonical" href="https://www.cadencrowson.com/projects/infinite-factory.html" />
+  <link rel="stylesheet" href="/page.css" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5015464003048928" crossorigin="anonymous"></script>
+</head>
+<body>
+  <nav class="nav">
+    <a class="brand" href="/">Caden Crowson</a>
+    <div class="links">
+      <a href="/">Home</a>
+      <a href="/about.html">About</a>
+      <a href="/privacy.html">Privacy</a>
+      <a href="/contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <main>
+    <h1>Infinite Factory</h1>
+    <p class="updated"><a href="/infinite-factory/">Play Infinite Factory →</a></p>
+
+    <p>
+      Infinite Factory is a crafting and automation game where the recipe book
+      is written by an AI. You start with humble basics — think sticks and
+      stones — and combine any two items on the crafting grid. Instead of
+      checking a fixed recipe list, the game asks a language model what those
+      two things should make, so the tech tree grows in directions nobody
+      planned, including me. Two players can take completely different routes
+      through the game and end up with inventories that barely overlap.
+    </p>
+
+    <h2>From crafting to automation</h2>
+    <p>
+      Discovering a recipe by hand is only half the game. Once you know a
+      combination works, you can put it on rails: place generators on the
+      factory floor to produce base items, and machines to run your known
+      recipes automatically. The factory keeps producing while you
+      experiment, so the loop becomes: explore weird combinations by hand,
+      automate the ones that matter, and use the output to reach items you
+      couldn't afford to make manually. Drag-and-drop everything — items,
+      machines, and an unceremonious trash can for the experiments that
+      didn't pan out.
+    </p>
+
+    <h2>The weekly race</h2>
+    <p>
+      Every week the game announces a Weekly Goal: the AI looks at the
+      current state of the tech tree and generates a target item that's
+      deliberately several steps beyond anything players have built. The
+      first players to craft it land on the leaderboard for that week's
+      event. It's the part of the game I'm most interested in watching,
+      because the goal item is new every time — there's no wiki to look up
+      and no established route, just everyone reasoning about what chain of
+      AI-generated recipes might plausibly get there before the timer runs
+      out.
+    </p>
+
+    <h2>Accounts and syncing</h2>
+    <p>
+      A free account keeps your inventory, discovered recipes, and factory
+      synced in the cloud, and is how the game tracks your place in weekly
+      events. The backend runs on Supabase — database, auth, and realtime
+      updates for the shared parts of the world — with recipe and goal
+      generation handled by Google's Gemini model through serverless edge
+      functions. The front end is React with a drag-and-drop toolkit and a
+      state store that keeps the factory simulation ticking smoothly.
+    </p>
+
+    <h2>Why I built it</h2>
+    <p>
+      Crafting games usually die when players exhaust the content. I wanted
+      to see what happens when the content can't be exhausted — when the
+      recipe space is effectively infinite and the challenge shifts from
+      "find the recipes the developer hid" to "reason about what an AI is
+      likely to say sticks and lightning make." The weekly goal turns that
+      open-endedness into a competition with real stakes and a fresh puzzle
+      every week.
+    </p>
+
+    <p>
+      Play it here: <a href="/infinite-factory/">Infinite Factory</a>.
+      Questions, feedback, or a great story about a cursed recipe chain?
+      <a href="/contact.html">Contact me</a>.
+    </p>
+  </main>
+
+  <footer>© Caden Crowson · <a href="/privacy.html">Privacy</a> · <a href="/contact.html">Contact</a></footer>
+</body>
+</html>

@@ -6,9 +6,9 @@
     <meta name="theme-color" content="#1a1a1a" />
 
     <title>Caden Crowson — Interactive Web Projects</title>
-    <meta name="description" content="Caden Crowson's portfolio — interactive web projects including a sand-image timer, falling-sand sandbox, and factory automation toy." />
+    <meta name="description" content="Caden Crowson's portfolio — a sand-image countdown timer, a merge-style incremental game, and an AI-powered crafting and automation game, all playable in the browser." />
     <meta name="author" content="Caden Crowson" />
-    <link rel="canonical" href="https://cadencrowson.com/" />
+    <link rel="canonical" href="https://www.cadencrowson.com/" />
 
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="apple-touch-icon" href="/favicon.svg" />
@@ -16,16 +16,16 @@
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Caden Crowson" />
     <meta property="og:title" content="Caden Crowson — Interactive Web Projects" />
-    <meta property="og:description" content="Interactive web projects: a sand-image timer, falling-sand sandbox, and factory automation toy." />
-    <meta property="og:url" content="https://cadencrowson.com/" />
-    <meta property="og:image" content="https://cadencrowson.com/og-image.svg" />
+    <meta property="og:description" content="Interactive web projects: a sand-image countdown timer, a merge-style incremental game, and an AI-powered crafting and automation game." />
+    <meta property="og:url" content="https://www.cadencrowson.com/" />
+    <meta property="og:image" content="https://www.cadencrowson.com/og-image.svg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Caden Crowson — Interactive Web Projects" />
     <meta name="twitter:description" content="Interactive web projects by Caden Crowson." />
-    <meta name="twitter:image" content="https://cadencrowson.com/og-image.svg" />
+    <meta name="twitter:image" content="https://www.cadencrowson.com/og-image.svg" />
 
     <meta name="google-adsense-account" content="ca-pub-5015464003048928" />
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5015464003048928" crossorigin="anonymous"></script>
@@ -35,7 +35,7 @@
       "@context": "https://schema.org",
       "@type": "Person",
       "name": "Caden Crowson",
-      "url": "https://cadencrowson.com/",
+      "url": "https://www.cadencrowson.com/",
       "email": "cadencrowson@gmail.com",
       "jobTitle": "Software Developer"
     }
@@ -47,16 +47,127 @@
         <div style="font-family: monospace; max-width: 640px; margin: 60px auto; padding: 0 24px; color: #dcdcdc;">
           <h1>Caden Crowson</h1>
           <p>This is the portfolio of Caden Crowson — a small collection of interactive web projects.</p>
-          <p>The home page is built as a React app and requires JavaScript. You can still visit the projects directly:</p>
+          <p>The interactive TV above requires JavaScript, but everything below — and the projects themselves — can be reached directly:</p>
           <ul>
             <li><a style="color:#4ade80" href="/sand-timer/">Sand Timer</a></li>
             <li><a style="color:#4ade80" href="/infinite-matter/">Infinite Matter</a></li>
             <li><a style="color:#4ade80" href="/infinite-factory/">Infinite Factory</a></li>
           </ul>
-          <p><a style="color:#4ade80" href="/about.html">About</a> · <a style="color:#4ade80" href="/privacy.html">Privacy</a> · <a style="color:#4ade80" href="/contact.html">Contact</a></p>
         </div>
       </noscript>
     </div>
+
+    <style>
+      #site-info {
+        font-family: monospace;
+        background: rgb(40, 40, 40);
+        color: rgb(220, 220, 220);
+        line-height: 1.7;
+        border-top: 1px solid rgb(70, 70, 70);
+      }
+      #site-info .inner {
+        max-width: 760px;
+        margin: 0 auto;
+        padding: 56px 24px 40px;
+      }
+      #site-info h2 {
+        font-size: 22px;
+        margin: 40px 0 12px;
+      }
+      #site-info h2:first-child { margin-top: 0; }
+      #site-info h3 { font-size: 17px; margin: 28px 0 8px; }
+      #site-info p { margin: 0 0 14px; }
+      #site-info a { color: #4ade80; }
+      #site-info .project-links {
+        font-size: 14px;
+        margin-bottom: 4px;
+      }
+      #site-info footer {
+        border-top: 1px solid rgb(70, 70, 70);
+        margin-top: 48px;
+        padding-top: 20px;
+        text-align: center;
+        color: rgb(140, 140, 140);
+        font-size: 12px;
+      }
+    </style>
+
+    <section id="site-info">
+      <div class="inner">
+        <h2>About this site</h2>
+        <p>
+          I'm Caden Crowson, a software developer, and this is where I publish the
+          interactive projects I build in my spare time. Everything here runs
+          directly in your browser — nothing to download or install. The screen
+          above works like an old television: each VHS tape on the rack is one of
+          my projects, and clicking a tape "inserts" it so you can see a live
+          preview before launching the full version.
+        </p>
+
+        <h2>The projects</h2>
+
+        <h3>Sand Timer</h3>
+        <p class="project-links">
+          <a href="/sand-timer/">Launch</a> · <a href="/projects/sand-timer.html">Read more</a>
+        </p>
+        <p>
+          A visual countdown timer that turns any picture into an hourglass.
+          Pick a duration and an image — one of the built-in presets or a photo
+          you upload — and grains of sand fall from the top of the screen and
+          settle into place, slowly assembling your picture pixel by pixel.
+          When the image is complete, time is up. It's a calmer way to watch
+          time pass than staring at digits, and it works well for study
+          sessions, presentations, and classroom timers.
+        </p>
+
+        <h3>Infinite Matter</h3>
+        <p class="project-links">
+          <a href="/infinite-matter/">Launch</a> · <a href="/projects/infinite-matter.html">Read more</a>
+        </p>
+        <p>
+          A merge-style incremental game. Items spawn onto your board
+          automatically; drag two identical items together and they combine into
+          the next item in the chain, earning you money to spend on upgrades like
+          faster spawning and automatic merging. Deeper in, the game opens up
+          with prestige resets, new sectors, cosmetic themes, and an online
+          leaderboard. If you create a free account, your progress syncs to the
+          cloud so you can continue on another device.
+        </p>
+
+        <h3>Infinite Factory</h3>
+        <p class="project-links">
+          <a href="/infinite-factory/">Launch</a> · <a href="/projects/infinite-factory.html">Read more</a>
+        </p>
+        <p>
+          A crafting and automation game where the recipe book is written by an
+          AI. Combine any two items on the crafting grid and a language model
+          decides what they make, so the tech tree keeps growing in directions no
+          one planned. Once you've discovered recipes by hand, you can place
+          generators and machines on the factory floor to automate them. Each
+          week the game announces a difficult AI-generated goal item, and players
+          race to be among the first to craft it.
+        </p>
+
+        <h2>How this site is built</h2>
+        <p>
+          The showcase shell you're looking at is a Vite + React app. Each
+          project lives in its own repository and is deployed independently to
+          Vercel; this domain uses subpath rewrites so they all appear under
+          cadencrowson.com. Everything is hand-written — no template, no site
+          builder. If you're curious about how any of it works, the
+          <a href="/about.html">about page</a> has more detail, or you can
+          <a href="/contact.html">email me</a> — I'm happy to talk shop.
+        </p>
+
+        <footer>
+          © Caden Crowson ·
+          <a href="/about.html">About</a> ·
+          <a href="/privacy.html">Privacy</a> ·
+          <a href="/contact.html">Contact</a>
+        </footer>
+      </div>
+    </section>
+
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sand Timer — a visual image countdown | Caden Crowson</title>
+  <meta name="description" content="How the Sand Timer works: a countdown that builds any picture out of falling sand, grain by grain. Uses, tips, and how it was built." />
+  <link rel="canonical" href="https://www.cadencrowson.com/projects/sand-timer.html" />
+  <link rel="stylesheet" href="/page.css" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5015464003048928" crossorigin="anonymous"></script>
+</head>
+<body>
+  <nav class="nav">
+    <a class="brand" href="/">Caden Crowson</a>
+    <div class="links">
+      <a href="/">Home</a>
+      <a href="/about.html">About</a>
+      <a href="/privacy.html">Privacy</a>
+      <a href="/contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <main>
+    <h1>Sand Timer</h1>
+    <p class="updated"><a href="/sand-timer/">Launch the Sand Timer →</a></p>
+
+    <p>
+      The Sand Timer is a countdown timer that treats time as something you
+      watch rather than something you read. Instead of digits ticking down,
+      you choose a picture, and the timer rebuilds it out of falling sand.
+      Grains drop from the top of the screen one after another, each landing
+      in its exact spot, and your image slowly assembles from the bottom up —
+      like an hourglass where the sand piles into a picture instead of a heap.
+      The pace is tied precisely to your chosen duration: when half the image
+      has formed, half your time has passed, and the moment the final grain
+      lands, time is up.
+    </p>
+
+    <h2>How to use it</h2>
+    <p>
+      Open the timer, pick a duration, and select an image. You can use one of
+      the built-in preset images or upload your own — a photo, a logo, a
+      drawing, anything. Press start and the sand begins to fall. A digital
+      readout and a grain counter run alongside the canvas if you want exact
+      numbers, and you can pause and resume whenever you like. The timer even
+      survives a page reload mid-countdown and picks up where it left off.
+      Uploaded images are processed entirely in your browser and never sent to
+      a server; saved presets live in your browser's local storage.
+    </p>
+
+    <h2>What it's useful for</h2>
+    <p>
+      I built it because ordinary timers create a strange kind of pressure —
+      you glance over, do the mental math, and lose your train of thought. A
+      picture gradually completing tells you "roughly how much time is left"
+      at a glance, without inviting you to compute anything. It works well as
+      a classroom activity timer, a presentation or lightning-talk clock, a
+      pomodoro-style study timer, and a timer for kids who can't read a clock
+      yet — anyone can see how much of the picture is still missing. There's
+      also a quiet reward at the end: instead of an alarm, you get the
+      finished image.
+    </p>
+
+    <h2>How it works under the hood</h2>
+    <p>
+      The whole thing is hand-written vanilla JavaScript on an HTML5 canvas —
+      no framework, no build step. When you load an image, it's downsampled
+      into a grid of grains, each keeping the color of the pixel it came from,
+      and the grid resolution scales with your duration so longer timers get
+      finer, more detailed sand. Each grain is assigned a precise landing time
+      spread evenly across the countdown, then falls from the top of the
+      canvas with an eased acceleration to its target spot. Bottom rows land
+      first, which is what makes the image appear to pile up naturally. The
+      clock is computed from real elapsed time, independent of rendering, so
+      a slow device never makes your countdown run long.
+    </p>
+
+    <h2>Small details</h2>
+    <p>
+      The timer keeps a lifetime counter of every grain that has ever landed
+      on your device, which turns out to be a strangely satisfying number to
+      watch grow. Transparent pixels in uploaded images are skipped, so logos
+      and cut-out images keep their silhouette instead of forming a square.
+    </p>
+
+    <p>
+      Try it here: <a href="/sand-timer/">Sand Timer</a>. Found a bug or have
+      an idea for a feature? <a href="/contact.html">Get in touch</a>.
+    </p>
+  </main>
+
+  <footer>© Caden Crowson · <a href="/privacy.html">Privacy</a> · <a href="/contact.html">Contact</a></footer>
+</body>
+</html>
